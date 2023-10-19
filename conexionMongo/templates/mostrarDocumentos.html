@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mostrarDocumentos.css') }}">
+
+    <title>Tabla de Resultados</title>
+</head>
+
+<body>
+    {% if resultado %}
+
+    <h1>Resultados de la Consulta</h1>
+    <table border="1" class="dark-table">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        {% for documento in resultado %}
+        <tr>
+            <td>{{ documento.area }}</td>
+            <td>{{ documento.concept }}</td>
+            <td class="words">
+                <ul>
+                    {% for keyword in documento.keywords %}
+                    <li>{{ keyword }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+</body>
+
+</html>

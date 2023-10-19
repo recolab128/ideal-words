@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Busqueda de palabras claves</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+<body>
+    <div id="main">
+        <div id="searchBar">
+            <form method="POST"  >
+                <label for="tema">Ingrese el tema a buscar:</label>
+                <input type="text" name="tema" id="tema" required>
+                <input type="submit" value="Buscar">
+            </form>
+            {% if Error %}
+            <p>{{Error}}</p>
+            {% endif %}
+        </div>
+       
+    </div>
+</body>
+
+</html>

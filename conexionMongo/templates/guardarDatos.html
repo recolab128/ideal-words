@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Busqueda de palabras claves</title>
+    <script src="{{ url_for('static', filename='validarDatos.js') }}"></script>
+
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+
+<body>
+    <div id="main">
+        <div id="contenedorOpciones">
+
+            {% if resultados %}
+            <form method="POST" action="/guardar_datos" >
+                <h1>Se busco <input type="text" name="tema2" id="tema2" value='{{tema}}' readonly></h1> 
+                <label>Selecciona la categoria:</label>
+
+                <select id="clasificaciones" name="clasificaciones">
+                    <option value="Ciencias naturales">Ciencias naturales</option>
+                    <option value="Ciencias sociales">Ciencias sociales</option>
+                    <option value="Ciencias formales">Ciencias formales</option>
+                </select>
+                <label>Selecciona las palabras que se guardarán:</label>
+                <div id="opciones">
+                    {% for palabra in resultados %}
+                    <label for="{{ palabra }}">
+                        <input type="checkbox" id="{{ palabra }}" name="opciones[]" value="{{ palabra }}"> {{ palabra }}
+                    </label><br>
+
+                    {% endfor %}
+                </div>
+                <label for="tema_nuevo">Sección para agregar otras palabras relacionadas con el tema</label>
+                <textarea id="opcionesUsuario" name="opciones_sugeridas" rows="4" cols="50" spellcheck="true"
+                    placeholder="por ejemplo: perro,gato,leon,etc."></textarea>
+                <p class="errores" id="errores"></p>
+
+                <div id="contenedorBtn">
+                    <input type="submit" value="Enviar" id="btnRegistrar" name="submit">
+                </div>
+            </form>
+
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>

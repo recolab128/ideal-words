@@ -1,0 +1,100 @@
+body {
+    background-color: #222;
+    color: #ddd;
+}
+
+#main {
+    overflow: auto;
+}
+
+#searchBar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#btnRegistrar {
+    align-items: center;
+}
+
+#contenedorBtn {
+    display: flex;
+    justify-content: space-around
+}
+
+#opciones {
+    overflow: auto;
+    max-height: 300px;
+}
+
+#clasificaciones {
+    width: 50%;
+    height: 30px;
+    font-size: 16px;
+}
+
+#contenedorOpciones {
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tema2 {
+    background-color: #222;
+
+    font-size: 25px;
+    width: 30%;
+    background-color:none;
+    border: none;
+    /* Borde predeterminado */
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #333;
+    border: 1px solid #888;
+    color: #ddd;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #aaa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #fff;
+}

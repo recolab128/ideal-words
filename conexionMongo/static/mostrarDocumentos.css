@@ -1,0 +1,46 @@
+body {
+    background-color: #222;
+    color: #ddd;
+}
+
+/* Estilo para la tabla */
+.dark-table {
+    background-color: #333;
+    /* Fondo oscuro */
+    color: #fff;
+    /* Texto en blanco */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Estilo para las filas impares */
+.dark-table tr:nth-child(odd) {
+    background-color: #444;
+    /* Fondo ligeramente más claro */
+}
+
+/* Estilo para las celdas */
+.dark-table th,
+.dark-table td {
+    border: 1px solid #555;
+    /* Borde oscuro */
+    padding: 8px;
+    text-align: left;
+    overflow: auto;
+    
+}
+
+/* Estilo para las cabeceras de la tabla */
+.dark-table th {
+    background-color: #222;
+    /* Fondo de cabecera más oscuro */
+}
+
+.words{
+    overflow: auto;
+    max-height: 10px;
+}
+
+tr{
+    max-height: 50px;
+}
